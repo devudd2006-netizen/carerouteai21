@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: careroute-ai
+    runtime: python
+    buildCommand: "cd frontend && npm ci && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "cd backend && python -m uvicorn main:app --host 0.0.0.0 --port $PORT"
+    healthCheckPath: /healthz
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: AUTH_SECRET
+        generateValue: true
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GOOGLE_MAPS_API_KEY
+        sync: false
+      - key: CAREROUTE_PROVIDER
+        value: overpass
+      - key: DEMO_APPOINTMENT_ROUTING
+        value: "1"
+      - key: MEDICAL_CAMPS_LIVE
+        value: "1"

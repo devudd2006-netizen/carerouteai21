@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-50: #effcf9;
+  --color-brand-100: #c8f5ec;
+  --color-brand-200: #96e9dc;
+  --color-brand-300: #5ed6c8;
+  --color-brand-400: #2fbdae;
+  --color-brand-500: #17a094;
+  --color-brand-600: #0e8178;
+  --color-brand-700: #0d6761;
+  --color-brand-800: #0e524e;
+  --color-brand-900: #0d4441;
+  --color-ink-900: #0f172a;
+  --color-ink-700: #334155;
+  --color-ink-500: #64748b;
+}
+
+html { font-size: 16px; }
+html.elderly { font-size: 19px; }
+
+body {
+  @apply bg-slate-50 text-ink-900 antialiased;
+  font-family: var(--font-sans);
+}
+
+.card { @apply bg-white rounded-2xl border border-slate-200 shadow-sm; }
+.btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 disabled:opacity-50 disabled:cursor-not-allowed; }
+.btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 disabled:opacity-50 disabled:cursor-not-allowed bg-brand-600 text-white hover:bg-brand-700; }
+.btn-secondary { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 disabled:opacity-50 disabled:cursor-not-allowed bg-white text-ink-700 border border-slate-300 hover:bg-slate-100; }
+.btn-danger { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 disabled:opacity-50 disabled:cursor-not-allowed bg-red-600 text-white hover:bg-red-700; }
+.btn-ghost { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 disabled:opacity-50 disabled:cursor-not-allowed text-brand-700 hover:bg-brand-50; }
+.input { @apply w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 placeholder:text-slate-400; }
+.label { @apply block text-xs font-semibold uppercase tracking-wide text-ink-500 mb-1.5; }
+.pill { @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold; }
+.section-title { @apply text-lg font-bold text-ink-900; }
+.muted { @apply text-sm text-ink-500; }

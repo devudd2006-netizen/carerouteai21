@@ -1,0 +1,15 @@
+{
+  "public_healthcare_discovery": {
+    "provider": "google_places_optional",
+    "requires_api_key": true,
+    "origin": "device_geolocation",
+    "fixed_city_fallback": false,
+    "private_hospital_records": false,
+    "live_hospital_appointment_slots": false,
+    "care_route_demo_appointments": true
+  },
+  "environment_variables": {
+    "VITE_GOOGLE_MAPS_API_KEY": "SET_IN_LOCAL_OR_DEPLOYMENT_ENVIRONMENT",
+    "GOOGLE_MAPS_API_KEY": "SET_IN_SERVER_ENVIRONMENT"
+  }
+}
