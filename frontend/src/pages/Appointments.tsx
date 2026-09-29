@@ -250,7 +250,9 @@ export function AppointmentDiscovery({ onClose, onBooked, initialHospitalId }:
               <Card className="mt-2">
                 <p className="font-semibold">Department information is not available from the public hospital directory.</p>
                 <p className="muted mt-1">You can still send an appointment request to this hospital. Hospital reception can assign the department and doctor after receiving the request.</p>
-                <button className="btn-primary mt-3" onClick={() => setDoctor({ doctor_id: null, name: "Hospital Appointment Desk", hospital_name: hospital.name, designation: "Reception routing", verification_status: "ROUTING_ONLY" })}>Request appointment at this hospital</button>
+                <button className="btn-primary mt-3" onClick={() => setDoctor({ doctor_id: 0, name: "Hospital Appointment Desk", hospital_name: hospital.name, designation: "Reception routing", verification_status: "ROUTING_ONLY" })}>
+                  Request appointment at this hospital
+                </button>
               </Card>
             ) : (
               <div className="mt-2 grid gap-2 sm:grid-cols-2">
